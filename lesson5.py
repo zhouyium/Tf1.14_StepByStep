@@ -5,9 +5,8 @@ placeholder in TensorFlow
 import tensorflow.compat.v1 as tf
 
 # define a placeholder
-input1 = tf.placeholder(tf.float32)
-input2 = tf.placeholder(tf.float32)
-input3 = tf.placeholder(tf.float32, [2, 2]) # define a shape [2, 2] placeholder
+input1 = tf.placeholder(tf.float32, [None])
+input2 = tf.placeholder(tf.float32, [None])
 output = tf.multiply(input1, input2) # output = input1 * input2
 
 init = tf.global_variables_initializer()
