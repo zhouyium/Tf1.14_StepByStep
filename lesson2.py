@@ -1,5 +1,5 @@
 '''
-本次课程将通过200次学习的方式来逼近y=x*0.1+0.3
+本次课程将通过200次学习的方式来逼近w=0.1 b=0.3
 '''
 import tensorflow.compat.v1 as tf
 import numpy as np
