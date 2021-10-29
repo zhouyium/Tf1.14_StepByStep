@@ -31,9 +31,6 @@ x_data = np.linspace(-1,1,300)[:,np.newaxis]
 # print(x_data)
 noise = np.random.normal(0,0.05,x_data.shape).astype(np.float32)
 y_data = np.square(x_data) - 0.5 + noise
-#显示一下原始数据
-plt.scatter(x_data, y_data)
-plt.show()
 
 #构建网络
 #定义输入层-隐藏层-输出层的三层神经网络结构，其中输入层和输出层仅有一个神经元，而隐藏层有10个神经元。同时，我们定义我们的损失是平方损失函数，通过梯度下降法来最小化我们的损失。
@@ -52,7 +49,6 @@ train_step = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(loss)
 
 #定义Session并训练
 init = tf.global_variables_initializer()
-
 with tf.Session() as sess:
     sess.run(init)
     for i in range(1000):
