@@ -60,6 +60,7 @@ plt.show(block=False)
 #定义Session并训练
 init = tf.global_variables_initializer()
 with tf.Session() as sess:
+    # you can run "tensorboard --logdir=E:\zhouyi\graph" in Win10
     writer = tf.summary.FileWriter("E:\zhouyi\graph", sess.graph)
     sess.run(init)
     for i in range(1000):
